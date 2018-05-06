@@ -7,19 +7,22 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.sumon.nuguideline.R;
+import com.sumon.nuguideline.data.dummy.DummyContent;
 import com.sumon.nuguideline.fragment.AdmissionFragment.OnListFragmentInteractionListener;
 
+import java.util.List;
+
 /**
- * {@link RecyclerView.Adapter} that can display a {@link DummyItem} and makes a call to the
+ * {@link RecyclerView.Adapter} that can display a {@link DummyContent.DummyItem} and makes a call to the
  * specified {@link OnListFragmentInteractionListener}.
  * TODO: Replace the implementation with code for your data type.
  */
 public class AdmissionFragmentAdapter extends RecyclerView.Adapter<AdmissionFragmentAdapter.ViewHolder> {
 
-    private final List<DummyItem> mValues;
+    private final List<DummyContent.DummyItem> mValues;
     private final OnListFragmentInteractionListener mListener;
 
-    public AdmissionFragmentAdapter(List<DummyItem> items, OnListFragmentInteractionListener listener) {
+    public AdmissionFragmentAdapter(List<DummyContent.DummyItem> items, OnListFragmentInteractionListener listener) {
         mValues = items;
         mListener = listener;
     }
@@ -58,7 +61,7 @@ public class AdmissionFragmentAdapter extends RecyclerView.Adapter<AdmissionFrag
         public final View mView;
         public final TextView mIdView;
         public final TextView mContentView;
-        public DummyItem mItem;
+        public DummyContent.DummyItem mItem;
 
         public ViewHolder(View view) {
             super(view);

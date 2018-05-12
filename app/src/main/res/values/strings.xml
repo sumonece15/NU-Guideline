@@ -25,7 +25,43 @@
 
     <string name="fa_admission">&#xf19d;</string>
 
+    <string-array name="array_grade">
+        <item>Select Grade</item>
+        <item>A+</item>
+        <item>A</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B</item>
+        <item>B-</item>
+        <item>C+</item>
+        <item>C</item>
+        <item>D</item>
 
+
+    </string-array>
+
+    <string-array name="array_credit">
+        <item>Select Credit</item>
+        <item>5.5</item>
+        <item>4</item>
+        <item>3</item>
+        <item>2</item>
+        <item>1.5</item>
+
+    </string-array>
+
+    <string-array name="array_semester">
+        <item>Select Semester</item>
+        <item>1st Semester</item>
+        <item>2nd Semester</item>
+        <item>3rd Semester</item>
+        <item>4th Semester</item>
+        <item>5th Semester</item>
+        <item>6th Semester</item>
+        <item>7th Semester</item>
+        <item>8th Semester</item>
+
+    </string-array>
 
 
 </resources>

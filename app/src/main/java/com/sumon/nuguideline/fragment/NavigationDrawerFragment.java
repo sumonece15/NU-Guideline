@@ -1,13 +1,14 @@
 package com.sumon.nuguideline.fragment;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBar;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBarDrawerToggle;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
+import android.content.Intent;
 import android.content.res.Configuration;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -17,17 +18,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ExpandableListView;
+import android.widget.ExpandableListView.OnGroupExpandListener;
 
+import com.sumon.nuguideline.R;
+import com.sumon.nuguideline.activity.AdmissionActivity;
+import com.sumon.nuguideline.activity.BrowserActivity;
+import com.sumon.nuguideline.activity.CalculatorActivity;
+import com.sumon.nuguideline.activity.ResultHistoryActivity;
+import com.sumon.nuguideline.activity.SyllabusActivity;
+import com.sumon.nuguideline.adapter.ExpandableListAdapter;
+import com.sumon.nuguideline.data.ExpandableListDataPump;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
-import android.widget.ExpandableListView.OnGroupExpandListener;
-
-import com.sumon.nuguideline.R;
-import com.sumon.nuguideline.adapter.ExpandableListAdapter;
-import com.sumon.nuguideline.data.ExpandableListDataPump;
 
 /**
  * Fragment used for managing interactions for and presentation of a navigation drawer.
@@ -104,16 +108,28 @@ public class NavigationDrawerFragment extends Fragment {
 
                 if (groupPosition == ExpandableListAdapter.ITEM1) {
 
+                    Intent i = new Intent(getActivity(), AdmissionActivity.class);
+                    startActivity(i);
                 }
                 else if (groupPosition == ExpandableListAdapter.ITEM2) {
                     retVal = false;
                 } else if (groupPosition == ExpandableListAdapter.ITEM3) {
                     retVal = false;
                 } else if (groupPosition == ExpandableListAdapter.ITEM4) {
-
                     // call some activity here
+
+                    Intent i = new Intent(getActivity(), BrowserActivity.class);
+                    i.putExtra("itemPosition", 10);
+                    startActivity(i);
+
+
                 } else if (groupPosition == ExpandableListAdapter.ITEM5) {
                     // call some activity here
+
+                    Intent i = new Intent(getActivity(), BrowserActivity.class);
+                    i.putExtra("itemPosition", 11);
+                    startActivity(i);
+
 
                 }
                 return retVal;
@@ -130,16 +146,27 @@ public class NavigationDrawerFragment extends Fragment {
                     if (childPosition == ExpandableListAdapter.SUBITEM2_1) {
 
                        // call activity here
+                        Intent i = new Intent(getActivity(), SyllabusActivity.class);
+                        i.putExtra("deptName", "CSE");
+                        startActivity(i);
+
 
                     }
                     else if (childPosition == ExpandableListAdapter.SUBITEM2_2) {
 
                        // call activity here
 
+                        Intent i = new Intent(getActivity(), SyllabusActivity.class);
+                        i.putExtra("deptName", "ECE");
+                        startActivity(i);
+
                     }
                     else if (childPosition == ExpandableListAdapter.SUBITEM2_3) {
 
                         // call activity here
+                        Intent i = new Intent(getActivity(), SyllabusActivity.class);
+                        i.putExtra("deptName", "BBA");
+                        startActivity(i);
 
                     }
 
@@ -150,15 +177,25 @@ public class NavigationDrawerFragment extends Fragment {
 
                         // call activity here
 
+                        Intent i = new Intent(getActivity(), CalculatorActivity.class);
+                        i.putExtra("calType", "calDetails");
+                        startActivity(i);
+
                     }
                     else if (childPosition == ExpandableListAdapter.SUBITEM3_2) {
 
                         // call activity here
 
+                        Intent i = new Intent(getActivity(), CalculatorActivity.class);
+                        i.putExtra("calType", "calculator");
+                        startActivity(i);
                     }
                     else if (childPosition == ExpandableListAdapter.SUBITEM3_3) {
 
                         // call activity here
+                        Intent i = new Intent(getActivity(), ResultHistoryActivity.class);
+                        i.putExtra("calType", "calHistory");
+                        startActivity(i);
 
                     }
 

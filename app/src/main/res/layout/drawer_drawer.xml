@@ -4,10 +4,10 @@
     android:layout_height="match_parent"
     android:layout_gravity="start"
     android:choiceMode="singleChoice"
-    android:divider="#ffffff"
+    android:divider="#000"
     android:dividerHeight="0.2dp"
     android:groupIndicator="@null"
     android:alpha="255"
     android:indicatorLeft="?android:attr/expandableListPreferredItemIndicatorLeft"
-    >
+    android:background="#fff">
 </ExpandableListView>

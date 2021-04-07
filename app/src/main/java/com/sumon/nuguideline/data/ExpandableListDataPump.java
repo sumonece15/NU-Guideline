@@ -13,6 +13,7 @@ public class ExpandableListDataPump {
         List<String> menu1 = new ArrayList<String>();
         List<String> menu3 = new ArrayList<String>();
         List<String> menu4 = new ArrayList<String>();
+        List<String> menu5 = new ArrayList<String>();
 
 
         List<String> list1 = new ArrayList<String>();
@@ -31,6 +32,8 @@ public class ExpandableListDataPump {
         expandableListDetail.put("CGPA", list2);
         expandableListDetail.put("Semester Form Fillup", menu3);
         expandableListDetail.put("Notice", menu4);
+
+        expandableListDetail.put("Developer", menu5);
 
 
         return expandableListDetail;

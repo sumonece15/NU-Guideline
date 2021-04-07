@@ -12,7 +12,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:src="@drawable/nulogo"/>
-        <TextView
+        <com.sumon.nuguideline.view.PhenomenaTextView
             android:id="@+id/textDrawerHeading"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

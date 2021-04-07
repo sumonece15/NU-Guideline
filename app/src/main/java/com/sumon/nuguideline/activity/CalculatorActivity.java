@@ -2,6 +2,7 @@ package com.sumon.nuguideline.activity;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -41,6 +42,8 @@ public class CalculatorActivity extends AppCompatActivity {
         btnReset = findViewById(R.id.btn_reset);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        getSupportActionBar().setTitle("CGPA Calculator");
 
         String calType = null;
         Bundle extras = getIntent().getExtras();
@@ -157,7 +160,7 @@ public class CalculatorActivity extends AppCompatActivity {
                     while (i < creditSpinnerArrayList.size() && i < gradeSpinnerArrayList.size()) {
                         Log.i("SpinnerTest",creditSpinnerArrayList.get(i).getSelectedItem().toString());
                         if (!creditSpinnerArrayList.get(i).getSelectedItem().equals("Select Credit") && !gradeSpinnerArrayList.get(i).getSelectedItem().equals("Select Grade")){
-                            creditSum = creditSum+ Integer.parseInt(String.valueOf(creditSpinnerArrayList.get(i).getSelectedItem()));
+                            creditSum = creditSum+ Float.parseFloat(String.valueOf(creditSpinnerArrayList.get(i).getSelectedItem()));
 
                             if (gradeSpinnerArrayList.get(i).getSelectedItem().equals("A+")){
                                 gradeArray.add((float) 4.00);
@@ -187,7 +190,7 @@ public class CalculatorActivity extends AppCompatActivity {
                                 gradeArray.add((float) 2.00);
                             }
 
-                            gradeSum = gradeSum + Integer.parseInt((String) creditSpinnerArrayList.get(i).getSelectedItem())* gradeArray.get(i);
+                            gradeSum = gradeSum + Float.parseFloat((String) creditSpinnerArrayList.get(i).getSelectedItem())* gradeArray.get(i);
 
                             i++;
 
@@ -212,7 +215,7 @@ public class CalculatorActivity extends AppCompatActivity {
                     TextView tvTotalCgpa = dialogView.findViewById(R.id.tv_total_cgpa);
                     final EditText etStudentName = dialogView.findViewById(R.id.et_student_name);
                     final Spinner spSemester = dialogView.findViewById(R.id.sp_semester);
-                    tvTotalCgpa.setText("YOUR TOTAL CGPA IS "+ cgpa);
+                    tvTotalCgpa.setText("YOUR TOTAL CGPA IS "+ String.format("%.2f", cgpa));
 
 
                     String stdnName, stdntCGPA, stdntSemester;
@@ -227,9 +230,10 @@ public class CalculatorActivity extends AppCompatActivity {
                                             String stdntSemester = spSemester.getSelectedItem().toString();
                                             CGPADBController cgpadbController = new CGPADBController(CalculatorActivity.this);
                                             cgpadbController.open();
-                                            cgpadbController.insertResultHistoryItem(stdnName, String.valueOf(cgpa), stdntSemester);
+                                            cgpadbController.insertResultHistoryItem(stdnName, String.valueOf(String.format("%.2f", cgpa)), stdntSemester);
                                             cgpadbController.close();
 
+                                            startActivity(new Intent(CalculatorActivity.this, ResultHistoryActivity.class));
                                             Toast.makeText(getApplicationContext(),"Calculated Result Saved!",Toast.LENGTH_LONG);
 
                                         }

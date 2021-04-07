@@ -1,13 +1,21 @@
 package com.sumon.nuguideline.activity;
 
-import android.support.v4.widget.DrawerLayout;
 import android.os.Bundle;
+import android.os.Handler;
+import android.support.v4.view.ViewPager;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.sumon.nuguideline.fragment.NavigationDrawerFragment;
 import com.sumon.nuguideline.R;
+import com.sumon.nuguideline.adapter.SliderAdapter;
+import com.sumon.nuguideline.fragment.NavigationDrawerFragment;
+
+import java.util.Timer;
+import java.util.TimerTask;
+
+import me.relex.circleindicator.CircleIndicator;
 
 
 public class MainActivity extends AppCompatActivity
@@ -16,13 +24,18 @@ public class MainActivity extends AppCompatActivity
     private NavigationDrawerFragment mNavigationDrawerFragment;
     private CharSequence mTitle;
     private DrawerLayout mDrawerLayout;
+    private static final int TIMER_DURATION = 3000;
+    private ViewPager vpSlider;
+
+    int images[] = {R.drawable.slide_4, R.drawable.slide_2, R.drawable.slide_3, R.drawable.slide_4, R.drawable.slide_5, R.drawable.slide_6, R.drawable.slider_7};
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getSupportActionBar().setTitle("Home");
+        getSupportActionBar().setTitle("Main Menu");
+
         // Set up the drawer.
 
         mNavigationDrawerFragment = (NavigationDrawerFragment)
@@ -33,6 +46,40 @@ public class MainActivity extends AppCompatActivity
                 (DrawerLayout) findViewById(R.id.main_layout));
 
         mDrawerLayout = (DrawerLayout) findViewById(R.id.main_layout);
+
+
+        loadSlider();
+    }
+
+    private void loadSlider() {
+        vpSlider = findViewById(R.id.vp_slider);
+        final SliderAdapter swipeAdapter = new SliderAdapter(getApplicationContext(), images);
+        vpSlider.setAdapter(swipeAdapter);
+        CircleIndicator indicator = findViewById(R.id.indicator);
+        indicator.setViewPager(vpSlider);
+
+        // Auto start of viewpager
+        final Handler handler = new Handler();
+        final Runnable Update = new Runnable() {
+            public void run() {
+                int setPosition = vpSlider.getCurrentItem() + 1;
+                if (setPosition == images.length) {
+                    setPosition = 0;
+                }
+                vpSlider.setCurrentItem(setPosition, true);
+                swipeAdapter.notifyDataSetChanged();
+            }
+        };
+
+        //  Auto animated timer
+        Timer swipeTimer = new Timer();
+        swipeTimer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                handler.post(Update);
+            }
+        }, TIMER_DURATION, TIMER_DURATION);
+
     }
 
     @Override

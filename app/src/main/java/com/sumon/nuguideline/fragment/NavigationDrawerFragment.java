@@ -23,7 +23,9 @@ import android.widget.ExpandableListView.OnGroupExpandListener;
 import com.sumon.nuguideline.R;
 import com.sumon.nuguideline.activity.AdmissionActivity;
 import com.sumon.nuguideline.activity.BrowserActivity;
+import com.sumon.nuguideline.activity.CalculationDetailsActivity;
 import com.sumon.nuguideline.activity.CalculatorActivity;
+import com.sumon.nuguideline.activity.DeveloperActivity;
 import com.sumon.nuguideline.activity.ResultHistoryActivity;
 import com.sumon.nuguideline.activity.SyllabusActivity;
 import com.sumon.nuguideline.adapter.ExpandableListAdapter;
@@ -132,6 +134,14 @@ public class NavigationDrawerFragment extends Fragment {
 
 
                 }
+                else if (groupPosition == ExpandableListAdapter.ITEM6) {
+                    // call some activity here
+
+                    Intent i = new Intent(getActivity(), DeveloperActivity.class);
+                    startActivity(i);
+
+
+                }
                 return retVal;
             }
         });
@@ -177,7 +187,7 @@ public class NavigationDrawerFragment extends Fragment {
 
                         // call activity here
 
-                        Intent i = new Intent(getActivity(), CalculatorActivity.class);
+                        Intent i = new Intent(getActivity(), CalculationDetailsActivity.class);
                         i.putExtra("calType", "calDetails");
                         startActivity(i);
 
@@ -251,7 +261,7 @@ public class NavigationDrawerFragment extends Fragment {
             public void onDrawerClosed(View drawerView) {
                 super.onDrawerClosed(drawerView);
                 getActionBar().setIcon(R.drawable.ic_drawer);
-
+                getActionBar().setTitle("Home");
                 if (!isAdded()) {
                     return;
                 }
@@ -262,7 +272,7 @@ public class NavigationDrawerFragment extends Fragment {
             @Override
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
-
+                getActionBar().setTitle("Main Menu");
 
                 if (!isAdded()) {
                     return;
@@ -282,7 +292,7 @@ public class NavigationDrawerFragment extends Fragment {
                 mDrawerToggle.syncState();
             }
         });
-
+        mDrawerLayout.openDrawer(mFragmentContainerView);
         mDrawerLayout.setDrawerListener(mDrawerToggle);
     }
 

@@ -61,6 +61,7 @@ public class ResultHistoryActivity extends AppCompatActivity {
         rvREsultHistory.setAdapter(resultHistoryAdapter);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Calculation History");
 
     }
 

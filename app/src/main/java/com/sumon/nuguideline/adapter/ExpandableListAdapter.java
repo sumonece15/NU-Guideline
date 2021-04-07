@@ -1,7 +1,5 @@
 package com.sumon.nuguideline.adapter;
 
-import java.util.HashMap;
-import java.util.List;
 import android.content.Context;
 import android.graphics.Typeface;
 import android.view.LayoutInflater;
@@ -10,8 +8,11 @@ import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
 import android.widget.TextView;
 
-import com.sumon.nuguideline.view.FontManager;
 import com.sumon.nuguideline.R;
+import com.sumon.nuguideline.view.FontManager;
+
+import java.util.HashMap;
+import java.util.List;
 
 
 public class ExpandableListAdapter extends BaseExpandableListAdapter {
@@ -25,6 +26,8 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
     public static int ITEM3 = 2;
     public static int ITEM4 = 3;
     public static int ITEM5 = 4;
+
+    public static int ITEM6 = 5;
 
 
     public static int SUBITEM3_1 = 0;
@@ -149,6 +152,9 @@ public class ExpandableListAdapter extends BaseExpandableListAdapter {
             listTitleTextIconView.setText(context.getResources().getString(R.string.fa_form));
         else if (listPosition == ITEM5)
             listTitleTextIconView.setText(context.getResources().getString(R.string.fa_notice));
+
+        else if (listPosition == ITEM6)
+            listTitleTextIconView.setText(context.getResources().getString(R.string.fa_developer));
 
         // set arrow icons for relevant items
         if (listPosition == ITEM2 || listPosition == ITEM3) {

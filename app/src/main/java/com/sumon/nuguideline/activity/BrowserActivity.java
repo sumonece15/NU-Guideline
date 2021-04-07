@@ -54,24 +54,42 @@ public class BrowserActivity extends AppCompatActivity {
 
             String url = null;
             if (itemPosition == 0){
+                getSupportActionBar().setTitle("IST Website");
+
                 url ="http://ist.edu.bd/";
             }
             else if(itemPosition == 1){
 
-                url = "http://istt.edu.bd/";
+                getSupportActionBar().setTitle("BIST Website");
+                url = "http://bist.edu.bd/";
             }
             else if(itemPosition == 2){
 
-                url = "https://bist.edu.bd/";
+                getSupportActionBar().setTitle("ISTT Website");
+                url = "https://istt.edu.bd/";
+            }
+
+            else if(itemPosition == 3){
+
+                getSupportActionBar().setTitle("DCC Website");
+                url = "http://www.dhakacitycollege.edu.bd/";
+            }
+
+            else if(itemPosition == 4){
+
+                getSupportActionBar().setTitle("TC Website");
+                url = "http://www.tejgaoncollegebd.com/";
             }
             else if(itemPosition == 10){
 
-                url = "http://nubd.info/prof/apply/";
+                getSupportActionBar().setTitle("Form Fillup");
+                url = "http://www.nubd.info/prof/student/";
 
             }
             else if(itemPosition == 11){
 
-                url = "http://www.nu.edu.bd/nu-home/index.php?option=com_content&view=category&id=107&Itemid=2337";
+                getSupportActionBar().setTitle("Notice Board");
+                url = "http://www.nu.ac.bd/recent-news-notice.php";
 
             }
 

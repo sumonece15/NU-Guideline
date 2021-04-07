@@ -6,16 +6,15 @@ import android.view.MenuItem;
 
 import com.sumon.nuguideline.R;
 
-public class CalculationDetailsActivity extends AppCompatActivity {
+public class DeveloperActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calculation_details);
-
-        getSupportActionBar().setTitle("Calculation Details");
+        setContentView(R.layout.activity_developer);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Developer");
     }
 
     @Override

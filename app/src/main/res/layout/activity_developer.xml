@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.sumon.nuguideline.activity.DeveloperActivity">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/sumon"/>
+
+
+
+    <com.sumon.nuguideline.view.PhenomenaTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:textColor="#000"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:text="MD Sumon Hossain"/>
+
+    <com.sumon.nuguideline.view.PhenomenaTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:text="Institute of Science and Technology"/>
+
+    <com.sumon.nuguideline.view.PhenomenaTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:text="B.Sc(Hons.) in Electronics and Communication Engineering"/>
+
+    <com.sumon.nuguideline.view.PhenomenaTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:gravity="center"
+        android:text="e-mail : sumonece15@gmail.com"/>
+
+
+
+</LinearLayout>

@@ -40,6 +40,7 @@ public class AdmissionActivity extends AppCompatActivity {
 
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Proffesional Institutes");
 
 
     }
@@ -56,7 +57,9 @@ public class AdmissionActivity extends AppCompatActivity {
         int[] covers = new int[]{
                 R.drawable.ist,
                 R.drawable.bist,
-                R.drawable.istt};
+                R.drawable.istt,
+                R.drawable.dcc,
+                R.drawable.tejgacollege};
 
         VarsityList ist = new VarsityList(covers[0],"Institute of Science and Technology(IST)");
         varsityLists.add(ist);
@@ -66,6 +69,12 @@ public class AdmissionActivity extends AppCompatActivity {
 
         VarsityList istt = new VarsityList(covers[2],"Institute of Science Trade and Technology(ISTT)");
         varsityLists.add(istt);
+
+        VarsityList dcc = new VarsityList(covers[3],"Dhaka City College (DCC)");
+        varsityLists.add(dcc);
+
+        VarsityList tejgao = new VarsityList(covers[4],"Tejgaon College");
+        varsityLists.add(tejgao);
 
         mAdapter.notifyDataSetChanged();
     }

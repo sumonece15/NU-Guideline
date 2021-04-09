@@ -87,6 +87,12 @@ public class BrowserActivity extends AppCompatActivity {
                 url = "http://amhcollege.edu.bd/";
             }
 
+            else if(itemPosition == 6){
+
+                getSupportActionBar().setTitle("NMUC Website");
+                url = "http://www.newmodelcollege.edu.bd/";
+            }
+
             else if(itemPosition == 10){
 
                 getSupportActionBar().setTitle("Form Fillup");

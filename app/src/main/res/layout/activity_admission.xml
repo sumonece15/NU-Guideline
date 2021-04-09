@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorMainBg"
     tools:context="com.sumon.nuguideline.activity.AdmissionActivity"
     android:orientation="vertical">
 

@@ -60,7 +60,8 @@ public class AdmissionActivity extends AppCompatActivity {
                 R.drawable.istt,
                 R.drawable.dcc,
                 R.drawable.tejgacollege,
-                R.drawable.alhaj_mokbul_college
+                R.drawable.alhaj_mokbul_college,
+                R.drawable.new_model_university_college
 
         };
 
@@ -81,6 +82,10 @@ public class AdmissionActivity extends AppCompatActivity {
 
         VarsityList amhuc = new VarsityList(covers[5],"Al Haj Mockbul Hossain University College (AMHUC)");
         varsityLists.add(amhuc);
+
+        VarsityList nmuc = new VarsityList(covers[6],"New Model University College (NMUC)");
+        varsityLists.add(nmuc);
+
 
         mAdapter.notifyDataSetChanged();
     }

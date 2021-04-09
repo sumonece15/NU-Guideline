@@ -59,7 +59,10 @@ public class AdmissionActivity extends AppCompatActivity {
                 R.drawable.bist,
                 R.drawable.istt,
                 R.drawable.dcc,
-                R.drawable.tejgacollege};
+                R.drawable.tejgacollege,
+                R.drawable.alhaj_mokbul_college
+
+        };
 
         VarsityList ist = new VarsityList(covers[0],"Institute of Science and Technology(IST)");
         varsityLists.add(ist);
@@ -73,8 +76,11 @@ public class AdmissionActivity extends AppCompatActivity {
         VarsityList dcc = new VarsityList(covers[3],"Dhaka City College (DCC)");
         varsityLists.add(dcc);
 
-        VarsityList tejgao = new VarsityList(covers[4],"Tejgaon College");
+        VarsityList tejgao = new VarsityList(covers[4],"Tejgaon College (TC)");
         varsityLists.add(tejgao);
+
+        VarsityList amhuc = new VarsityList(covers[5],"Al Haj Mockbul Hossain University College (AMHUC)");
+        varsityLists.add(amhuc);
 
         mAdapter.notifyDataSetChanged();
     }

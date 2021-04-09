@@ -80,6 +80,13 @@ public class BrowserActivity extends AppCompatActivity {
                 getSupportActionBar().setTitle("TC Website");
                 url = "http://www.tejgaoncollegebd.com/";
             }
+
+            else if(itemPosition == 5){
+
+                getSupportActionBar().setTitle("AMHUC Website");
+                url = "http://amhcollege.edu.bd/";
+            }
+
             else if(itemPosition == 10){
 
                 getSupportActionBar().setTitle("Form Fillup");

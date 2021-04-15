@@ -93,13 +93,80 @@ public class BrowserActivity extends AppCompatActivity {
                 url = "http://www.newmodelcollege.edu.bd/";
             }
 
+            else if(itemPosition == 7){
+
+                getSupportActionBar().setTitle("DCC Website");
+                url = "https://www.dcc.edu.bd/";
+            }
+
+
+            else if(itemPosition == 8){
+
+                getSupportActionBar().setTitle("SBPGC Website");
+                url = "http://www.sbpgc.edu.bd/";
+            }
+
+            else if(itemPosition == 9){
+
+                getSupportActionBar().setTitle("AIFT Website");
+                url = "http://aift.edu.bd/";
+            }
+
             else if(itemPosition == 10){
+
+                getSupportActionBar().setTitle("NIFT Website");
+                url = "http://www.nift.edu.bd/";
+            }
+
+            else if(itemPosition == 11){
+
+                getSupportActionBar().setTitle("PISFT Website");
+                url = "http://www.pisft.edu.bd/";
+            }
+
+            else if(itemPosition == 12){
+
+                getSupportActionBar().setTitle("MKC Website");
+                url = "http://mkc.edu.bd/";
+            }
+
+            else if(itemPosition == 13){
+
+                getSupportActionBar().setTitle("NIST Website");
+                url = "https://nist.edu.bd/";
+            }
+
+            else if(itemPosition == 14){
+
+                getSupportActionBar().setTitle("DIIT Website");
+                url = "https://www.diit.info/index";
+            }
+
+            else if(itemPosition == 15){
+
+                getSupportActionBar().setTitle("CFTM Website");
+                url = "https://www.cftm-bd.com/";
+            }
+
+            else if(itemPosition == 16){
+
+                getSupportActionBar().setTitle("SIC Website");
+                url = "https://sic.edu.bd/";
+            }
+
+            else if(itemPosition == 17){
+
+                getSupportActionBar().setTitle("CAT Website");
+                url = "https://www.catechedu.com/";
+            }
+
+            else if(itemPosition == 18){
 
                 getSupportActionBar().setTitle("Form Fillup");
                 url = "http://www.nubd.info/prof/student/";
 
             }
-            else if(itemPosition == 11){
+            else if(itemPosition == 19){
 
                 getSupportActionBar().setTitle("Notice Board");
                 url = "http://www.nu.ac.bd/recent-news-notice.php";

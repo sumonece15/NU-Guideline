@@ -61,7 +61,19 @@ public class AdmissionActivity extends AppCompatActivity {
                 R.drawable.dcc,
                 R.drawable.tejgacollege,
                 R.drawable.alhaj_mokbul_college,
-                R.drawable.new_model_university_college
+                R.drawable.new_model_university_college,
+                R.drawable.dcomc,
+                R.drawable.sbpgc,
+                R.drawable.aift,
+                R.drawable.nift,
+                R.drawable.pisft,
+                R.drawable.mkc,
+                R.drawable.nist,
+                R.drawable.diit,
+                R.drawable.cftm,
+                R.drawable.sic,
+                R.drawable.cat
+
 
         };
 
@@ -85,6 +97,39 @@ public class AdmissionActivity extends AppCompatActivity {
 
         VarsityList nmuc = new VarsityList(covers[6],"New Model University College (NMUC)");
         varsityLists.add(nmuc);
+
+        VarsityList dcomc = new VarsityList(covers[7],"Dhaka Commerce College (DCC)");
+        varsityLists.add(dcomc);
+
+        VarsityList sbpgc = new VarsityList(covers[8],"Shaikh Burhanuddin Post Graduate College (SBPGC)");
+        varsityLists.add(sbpgc);
+
+        VarsityList aift = new VarsityList(covers[9],"Apparel Institute of Fashion Technology (AIFT)");
+        varsityLists.add(aift);
+
+        VarsityList nift = new VarsityList(covers[10],"National Institute of Fashion Technology (NIFT)");
+        varsityLists.add(nift);
+
+        VarsityList pisft = new VarsityList(covers[11],"Professional Institute of Science & Fashion Technology (PISFT)");
+        varsityLists.add(pisft);
+
+        VarsityList mkc = new VarsityList(covers[12],"Mohammadpur Kendriya College (MKC)");
+        varsityLists.add(mkc);
+
+        VarsityList nist = new VarsityList(covers[13],"National Institute of Science & Technology (nist)");
+        varsityLists.add(nist);
+
+        VarsityList diit = new VarsityList(covers[14],"Daffodil Institute of IT (DIIT)");
+        varsityLists.add(diit);
+
+        VarsityList cftm = new VarsityList(covers[15],"College of Fashion Technology & Management (CFTM)");
+        varsityLists.add(cftm);
+
+        VarsityList sic = new VarsityList(covers[16],"Shyamoli Ideal College (SIC)");
+        varsityLists.add(sic);
+
+        VarsityList cat = new VarsityList(covers[17],"College of Aviation Technology (CAT)");
+        varsityLists.add(cat);
 
 
         mAdapter.notifyDataSetChanged();

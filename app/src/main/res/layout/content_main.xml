@@ -35,47 +35,53 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:orientation="vertical"
-                android:padding="15dp">
+                android:padding="10dp"
+                >
 
-                <TextView
+                <me.biubiubiu.justifytext.library.JustifyTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="20dp"
                     android:text="21 years ago the National University was established by an Act of Parliament as an affiliating University of the country to impart graduate and post-graduate level education to the students through its affiliated colleges and professional institutions throughout the country."
                     android:textColor="#EEF0F3" />
 
-                <TextView
+                <me.biubiubiu.justifytext.library.JustifyTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="20dp"
                     android:text="For that matter the University has been playing the most significant role in providing opportunities for higher education among the students coming from rural and semi-rural background at an affordablemeans since its inception. It is almost an impossible task to run the affairs of the University effectively concerning its currently 2000 affiliated colleges and institutions from a single Headquarters by following a traditional method."
                     android:textColor="#EEF0F3" />
 
-                <TextView
+                <me.biubiubiu.justifytext.library.JustifyTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="20dp"
                     android:text="Hence, apart from decentralization to Regional Centres, the present administration of the University has taken a number of measures to turn it into a digitized University based on wholesale networking. This will definitely help us overcome the colossal session jam from which the students are currently suffering."
                     android:textColor="#EEF0F3" />
 
-                <TextView
+                <me.biubiubiu.justifytext.library.JustifyTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="20dp"
                     android:text="Further the administration has undertaken necessary steps to transform the Gazipur campus into a Centre of Excellence with a focus on higher research and learning at the post-graduate level leading to M. Phil and Ph.D. degrees at the Gazipur campus leaving the matter of imparting classroom education to the affiliated colleges and institutions."
                     android:textColor="#EEF0F3" />
 
-                <TextView
+                <me.biubiubiu.justifytext.library.JustifyTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="15dp"
-                    android:gravity="center"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="20dp"
                     android:text="In this era of globalization we can not afford to produce average graduates but those of higher quality who can only compete globally.In this endeavour and the fulfillment of our vision, I seek co-operation from all quarters."
                     android:textColor="#EEF0F3" />
 

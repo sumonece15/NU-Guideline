@@ -27,7 +27,14 @@ public class MainActivity extends AppCompatActivity
     private static final int TIMER_DURATION = 3000;
     private ViewPager vpSlider;
 
-    int images[] = {R.drawable.slide_4, R.drawable.slide_2, R.drawable.slide_3, R.drawable.slide_4, R.drawable.slide_5, R.drawable.slide_6, R.drawable.slider_7};
+    int images[] = new int[]{
+            R.drawable.slide_1,
+            R.drawable.slide_2,
+            R.drawable.slide_3,
+            R.drawable.slide_4,
+            R.drawable.slide_5
+
+    };
 
 
     @Override
